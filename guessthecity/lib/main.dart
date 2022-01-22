@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:guessthecity/widget/welcome.dart';
+import 'package:guessthecity/screens/home_screen.dart';
 
 void main() {
   runApp(const Expenso());
@@ -23,7 +23,7 @@ class _ExpensoState extends State<Expenso> {
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
-        body: Welcome(),
+        body: Home_Screen(),
       ),
       debugShowCheckedModeBanner: false,
     );

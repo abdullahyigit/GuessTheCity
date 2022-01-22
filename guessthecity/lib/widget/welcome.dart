@@ -9,15 +9,19 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  // ignore: prefer_typing_uninitialized_variables
+  var _result;
+
   @override
   Widget build(BuildContext context) {
+    var _height = MediaQuery.of(context).size.height;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Positioned.fill(
               child: Image.asset(
-            'assets/cities5.jpg',
+            'assets/3.jpg',
             fit: BoxFit.cover,
           )),
           Container(
@@ -26,18 +30,17 @@ class _WelcomeState extends State<Welcome> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: _height / 12),
                 Container(
-                  margin: const EdgeInsets.only(top: 100),
                   width: 350,
                   child: Text(
-                    "GUESS THE CITY",
+                    "GUESS \nTHE \nCITY",
                     style: GoogleFonts.poppins(
                         fontSize: 40,
                         color: const Color(0xffBABABA),
                         fontWeight: FontWeight.w600),
                   ),
                 ),
-                const SizedBox(height: 150),
                 Text(
                   'Welcome',
                   style: GoogleFonts.poppins(
@@ -46,23 +49,50 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 10),
-                  width: 350,
                   child: Text(
-                    "Please enter a nickname",
+                    "Please select\na language",
                     style: GoogleFonts.poppins(
                         fontSize: 17,
                         color: const Color(0xffBABABA),
                         fontWeight: FontWeight.w300),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(
-                      right: MediaQuery.of(context).size.width / 12),
-                  child: TextFormField(
-                    maxLength: 15,
-                  ),
-                ),
+                SizedBox(height: _height / 36),
+                RadioListTile(
+                    contentPadding: EdgeInsets.zero,
+                    title: Text(
+                      "Türkçe",
+                      style: GoogleFonts.poppins(
+                          fontSize: 17,
+                          color: const Color(0xffBABABA),
+                          fontWeight: FontWeight.w300),
+                    ),
+                    activeColor: Colors.blue,
+                    value: 1,
+                    groupValue: _result,
+                    onChanged: (value) {
+                      setState(() {
+                        _result = value;
+                      });
+                    }),
+                RadioListTile(
+                    contentPadding: EdgeInsets.zero,
+                    title: Text(
+                      "English",
+                      style: GoogleFonts.poppins(
+                          fontSize: 17,
+                          color: const Color(0xffBABABA),
+                          fontWeight: FontWeight.w300),
+                    ),
+                    activeColor: Colors.blue,
+                    value: 2,
+                    groupValue: _result,
+                    onChanged: (value) {
+                      setState(() {
+                        _result = value;
+                      });
+                    }),
+                SizedBox(height: _height / 3),
                 Container(
                   margin: const EdgeInsets.only(
                     top: 20,
@@ -72,11 +102,10 @@ class _WelcomeState extends State<Welcome> {
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                         fixedSize: const Size(199, 50),
-                        primary: const Color(0xffC65466),
+                        primary: const Color(0xffBABABA),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18))),
                     child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Get started',
