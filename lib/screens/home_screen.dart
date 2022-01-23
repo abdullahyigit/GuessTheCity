@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:guessthecity/screens/guess_screen.dart';
 
 class Home_Screen extends StatefulWidget {
   const Home_Screen({Key? key}) : super(key: key);
@@ -26,181 +27,204 @@ class _Home_ScreenState extends State<Home_Screen> {
           children: <Widget>[
 //===========================AVRUPA=============================================
             Expanded(
-              child: Container(
-                margin: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: const Color(0xffd5b791),
-                  border: Border.all(
+              child: InkWell(
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    content: Text('Avruma Kıtası Şehirleri'),
+                    duration: Duration(seconds: 2),
+                  ));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Guess_Screen()));
+                },
+                child: Container(
+                  margin: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
                     color: const Color(0xffd5b791),
-                  ),
-                  borderRadius: BorderRadius.circular(30.0),
-                  image: const DecorationImage(
-                      image: AssetImage("assets/continents/europe.png"),
-                      fit: BoxFit.fitHeight,
-                      alignment: Alignment.centerRight),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(width: MediaQuery.of(context).size.width / 12),
-                    const Text(
-                      'Avrupa',
-                      style: TextStyle(fontSize: 27),
+                    border: Border.all(
+                      color: const Color(0xffd5b791),
                     ),
-                    const Text(
-                      '(0/80)',
-                      style: TextStyle(fontSize: 27),
-                    )
-                  ],
+                    borderRadius: BorderRadius.circular(30.0),
+                    image: const DecorationImage(
+                        image: AssetImage("assets/continents/europe.png"),
+                        fit: BoxFit.fitHeight,
+                        alignment: Alignment.centerRight),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(width: MediaQuery.of(context).size.width / 12),
+                      const Text(
+                        'Avrupa',
+                        style: TextStyle(fontSize: 27),
+                      ),
+                      const Text(
+                        '(0/80)',
+                        style: TextStyle(fontSize: 27),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
 //===========================ASYA=============================================
             Expanded(
-              child: Container(
-                margin: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: const Color(0xffd5b791),
-                  border: Border.all(
+              child: InkWell(
+                child: Container(
+                  margin: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
                     color: const Color(0xffd5b791),
-                  ),
-                  borderRadius: BorderRadius.circular(30.0),
-                  image: const DecorationImage(
-                      image: AssetImage("assets/continents/asia.jpg"),
-                      fit: BoxFit.fitHeight,
-                      alignment: Alignment.centerRight),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(width: MediaQuery.of(context).size.width / 12),
-                    const Text(
-                      'Asya',
-                      style: TextStyle(fontSize: 27),
+                    border: Border.all(
+                      color: const Color(0xffd5b791),
                     ),
-                    const Text(
-                      '(0/80)',
-                      style: TextStyle(fontSize: 27),
-                    )
-                  ],
+                    borderRadius: BorderRadius.circular(30.0),
+                    image: const DecorationImage(
+                        image: AssetImage("assets/continents/asia.jpg"),
+                        fit: BoxFit.fitHeight,
+                        alignment: Alignment.centerRight),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(width: MediaQuery.of(context).size.width / 12),
+                      const Text(
+                        'Asya',
+                        style: TextStyle(fontSize: 27),
+                      ),
+                      const Text(
+                        '(0/80)',
+                        style: TextStyle(fontSize: 27),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
 //===========================KUZEYAMERİKA=============================================
             Expanded(
-              child: Container(
-                margin: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: const Color(0xffd5b791),
-                  border: Border.all(
+              child: InkWell(
+                child: Container(
+                  margin: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
                     color: const Color(0xffd5b791),
-                  ),
-                  borderRadius: BorderRadius.circular(30.0),
-                  image: const DecorationImage(
-                      image: AssetImage("assets/continents/northamerica.png"),
-                      fit: BoxFit.fitHeight,
-                      alignment: Alignment.centerRight),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(width: MediaQuery.of(context).size.width / 12),
-                    const Text(
-                      'Kuzey Amerika',
-                      style: TextStyle(fontSize: 27),
+                    border: Border.all(
+                      color: const Color(0xffd5b791),
                     ),
-                    const Text(
-                      '(0/80)',
-                      style: TextStyle(fontSize: 27),
-                    )
-                  ],
+                    borderRadius: BorderRadius.circular(30.0),
+                    image: const DecorationImage(
+                        image: AssetImage("assets/continents/northamerica.png"),
+                        fit: BoxFit.fitHeight,
+                        alignment: Alignment.centerRight),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(width: MediaQuery.of(context).size.width / 12),
+                      const Text(
+                        'Kuzey Amerika',
+                        style: TextStyle(fontSize: 27),
+                      ),
+                      const Text(
+                        '(0/80)',
+                        style: TextStyle(fontSize: 27),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
 //===========================GÜNEYAMERİKA=============================================
             Expanded(
-              child: Container(
-                margin: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: const Color(0xffd5b791),
-                  border: Border.all(
+              child: InkWell(
+                child: Container(
+                  margin: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
                     color: const Color(0xffd5b791),
-                  ),
-                  borderRadius: BorderRadius.circular(30.0),
-                  image: const DecorationImage(
-                      image: AssetImage("assets/continents/southamerica.png"),
-                      fit: BoxFit.fitHeight,
-                      alignment: Alignment.centerRight),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(width: MediaQuery.of(context).size.width / 12),
-                    const Text(
-                      'Güney Amerika',
-                      style: TextStyle(fontSize: 27),
+                    border: Border.all(
+                      color: const Color(0xffd5b791),
                     ),
-                    const Text(
-                      '(0/80)',
-                      style: TextStyle(fontSize: 27),
-                    )
-                  ],
+                    borderRadius: BorderRadius.circular(30.0),
+                    image: const DecorationImage(
+                        image: AssetImage("assets/continents/southamerica.png"),
+                        fit: BoxFit.fitHeight,
+                        alignment: Alignment.centerRight),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(width: MediaQuery.of(context).size.width / 12),
+                      const Text(
+                        'Güney Amerika',
+                        style: TextStyle(fontSize: 27),
+                      ),
+                      const Text(
+                        '(0/80)',
+                        style: TextStyle(fontSize: 27),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
 //===========================AFRİKA=============================================
             Expanded(
-              child: Container(
-                margin: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: const Color(0xffd5b791),
-                  border: Border.all(
+              child: InkWell(
+                child: Container(
+                  margin: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
                     color: const Color(0xffd5b791),
-                  ),
-                  borderRadius: BorderRadius.circular(30.0),
-                  image: const DecorationImage(
-                      image: AssetImage("assets/continents/africa.jpg"),
-                      fit: BoxFit.fitHeight,
-                      alignment: Alignment.centerRight),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(width: MediaQuery.of(context).size.width / 12),
-                    const Text(
-                      'Afrika',
-                      style: TextStyle(fontSize: 27),
+                    border: Border.all(
+                      color: const Color(0xffd5b791),
                     ),
-                    const Text(
-                      '(0/80)',
-                      style: TextStyle(fontSize: 27),
-                    )
-                  ],
+                    borderRadius: BorderRadius.circular(30.0),
+                    image: const DecorationImage(
+                        image: AssetImage("assets/continents/africa.jpg"),
+                        fit: BoxFit.fitHeight,
+                        alignment: Alignment.centerRight),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(width: MediaQuery.of(context).size.width / 12),
+                      const Text(
+                        'Afrika',
+                        style: TextStyle(fontSize: 27),
+                      ),
+                      const Text(
+                        '(0/80)',
+                        style: TextStyle(fontSize: 27),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
 //===========================AVUSTRALYA=============================================
             Expanded(
-              child: Container(
-                margin: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: const Color(0xffd5b791),
-                  border: Border.all(
+              child: InkWell(
+                onTap: () {},
+                child: Container(
+                  margin: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
                     color: const Color(0xffd5b791),
-                  ),
-                  borderRadius: BorderRadius.circular(30.0),
-                  image: const DecorationImage(
-                      image: AssetImage("assets/continents/australia.jpg"),
-                      fit: BoxFit.fitHeight,
-                      alignment: Alignment.centerRight),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(width: MediaQuery.of(context).size.width / 12),
-                    const Text(
-                      'Avustralya',
-                      style: TextStyle(fontSize: 27),
+                    border: Border.all(
+                      color: const Color(0xffd5b791),
                     ),
-                    const Text(
-                      '(0/80)',
-                      style: TextStyle(fontSize: 27),
-                    )
-                  ],
+                    borderRadius: BorderRadius.circular(30.0),
+                    image: const DecorationImage(
+                        image: AssetImage("assets/continents/australia.jpg"),
+                        fit: BoxFit.fitHeight,
+                        alignment: Alignment.centerRight),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(width: MediaQuery.of(context).size.width / 12),
+                      const Text(
+                        'Avustralya',
+                        style: TextStyle(fontSize: 27),
+                      ),
+                      const Text(
+                        '(0/80)',
+                        style: TextStyle(fontSize: 27),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -216,7 +240,7 @@ class _Home_ScreenState extends State<Home_Screen> {
   }
 }
 
-Widget Continent(context, String continent_name) {
+Widget continent(context, String continentName) {
   return Expanded(
     child: Container(
       margin: const EdgeInsets.all(5),
