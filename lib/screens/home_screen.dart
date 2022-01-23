@@ -35,7 +35,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                   ),
                   borderRadius: BorderRadius.circular(30.0),
                   image: const DecorationImage(
-                      image: AssetImage("assets/europe3.png"),
+                      image: AssetImage("assets/continents/europe.png"),
                       fit: BoxFit.fitHeight,
                       alignment: Alignment.centerRight),
                 ),
@@ -65,7 +65,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                   ),
                   borderRadius: BorderRadius.circular(30.0),
                   image: const DecorationImage(
-                      image: AssetImage("assets/asia.jpg"),
+                      image: AssetImage("assets/continents/asia.jpg"),
                       fit: BoxFit.fitHeight,
                       alignment: Alignment.centerRight),
                 ),
@@ -95,7 +95,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                   ),
                   borderRadius: BorderRadius.circular(30.0),
                   image: const DecorationImage(
-                      image: AssetImage("assets/europe3.png"),
+                      image: AssetImage("assets/continents/northamerica.png"),
                       fit: BoxFit.fitHeight,
                       alignment: Alignment.centerRight),
                 ),
@@ -125,7 +125,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                   ),
                   borderRadius: BorderRadius.circular(30.0),
                   image: const DecorationImage(
-                      image: AssetImage("assets/europe3.png"),
+                      image: AssetImage("assets/continents/southamerica.png"),
                       fit: BoxFit.fitHeight,
                       alignment: Alignment.centerRight),
                 ),
@@ -144,7 +144,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ),
               ),
             ),
-//===========================AVUSTRALYA=============================================
+//===========================AFRİKA=============================================
             Expanded(
               child: Container(
                 margin: const EdgeInsets.all(5),
@@ -155,7 +155,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                   ),
                   borderRadius: BorderRadius.circular(30.0),
                   image: const DecorationImage(
-                      image: AssetImage("assets/europe3.png"),
+                      image: AssetImage("assets/continents/africa.jpg"),
                       fit: BoxFit.fitHeight,
                       alignment: Alignment.centerRight),
                 ),
@@ -185,7 +185,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                   ),
                   borderRadius: BorderRadius.circular(30.0),
                   image: const DecorationImage(
-                      image: AssetImage("assets/europe3.png"),
+                      image: AssetImage("assets/continents/australia.jpg"),
                       fit: BoxFit.fitHeight,
                       alignment: Alignment.centerRight),
                 ),
@@ -208,9 +208,42 @@ class _Home_ScreenState extends State<Home_Screen> {
             Expanded(
               child: Container(),
             ),
+            // Continent(context,'Avrupa')
           ],
         ),
       ),
     );
   }
+}
+
+Widget Continent(context, String continent_name) {
+  return Expanded(
+    child: Container(
+      margin: const EdgeInsets.all(5),
+      decoration: BoxDecoration(
+        color: const Color(0xffd5b791),
+        border: Border.all(
+          color: const Color(0xffd5b791),
+        ),
+        borderRadius: BorderRadius.circular(30.0),
+        image: const DecorationImage(
+            image: AssetImage("assets/europe3.png"),
+            fit: BoxFit.fitHeight,
+            alignment: Alignment.centerRight),
+      ),
+      child: Row(
+        children: [
+          SizedBox(width: MediaQuery.of(context).size.width / 12),
+          const Text(
+            'Afrika',
+            style: TextStyle(fontSize: 27),
+          ),
+          const Text(
+            '(0/80)',
+            style: TextStyle(fontSize: 27),
+          )
+        ],
+      ),
+    ),
+  );
 }
