@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "759526946385",
+    "firebase_url": "https://guessthecity-96f68-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "guessthecity-96f68",
+    "storage_bucket": "guessthecity-96f68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759526946385:android:45c32fc27e78bb0ef1aa70",
+        "android_client_info": {
+          "package_name": "com.example.guessthecity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759526946385-rlug783cpujaq7bt7lnhmv2uihat65h0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBObtgwzEgEpiJgbQWQksKgeMuegCqM46M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759526946385-rlug783cpujaq7bt7lnhmv2uihat65h0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

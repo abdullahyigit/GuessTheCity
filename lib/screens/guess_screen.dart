@@ -1,7 +1,6 @@
 // ignore_for_file: camel_case_types
 
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:guessthecity/components/clues.dart';
 import 'package:guessthecity/widget/answerArea.dart';
@@ -9,8 +8,6 @@ import 'package:guessthecity/widget/appBar.dart';
 import 'package:guessthecity/widget/mixedLettersArea.dart';
 import 'package:guessthecity/widget/photoArea.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
-
-import 'package:progress_state_button/progress_button.dart';
 
 class Guess_Screen extends StatefulWidget {
   const Guess_Screen({Key? key}) : super(key: key);
@@ -81,11 +78,12 @@ class _Guess_ScreenState extends State<Guess_Screen> {
   }
 
   void _doSomething(bool _isTrue) async {
-    Timer(Duration(seconds: 2), () {
-      if (_isTrue == false)
+    Timer(const Duration(seconds: 2), () {
+      if (_isTrue == false) {
         _btnController.error();
-      else
+      } else {
         _btnController.success();
+      }
     });
   }
 }

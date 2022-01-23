@@ -1,31 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:guessthecity/screens/home_screen.dart';
 
 void main() {
-  runApp(const Expenso());
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    systemNavigationBarColor: Color(0xff1C1C1C),
-  ));
+  runApp(MyApp());
 }
 
-class Expenso extends StatefulWidget {
-  const Expenso({Key? key}) : super(key: key);
-
-  @override
-  State<Expenso> createState() => _ExpensoState();
-}
-
-class _ExpensoState extends State<Expenso> {
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      title: 'Flutter Firebase Kurulumu',
       home: Scaffold(
-        resizeToAvoidBottomInset: false,
-        backgroundColor: Colors.white,
-        body: Home_Screen(),
+        body: ListView.builder(
+          itemBuilder: (ctx, idx) {
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('I Love Flutter'),
+            );
+          },
+          itemCount: 10,
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {},
+        ),
       ),
-      debugShowCheckedModeBanner: false,
     );
   }
 }

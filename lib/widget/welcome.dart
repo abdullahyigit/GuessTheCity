@@ -31,7 +31,7 @@ class _WelcomeState extends State<Welcome> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: _height / 12),
-                Container(
+                SizedBox(
                   width: 350,
                   child: Text(
                     "GUESS \nTHE \nCITY",
@@ -48,14 +48,12 @@ class _WelcomeState extends State<Welcome> {
                     color: Colors.white,
                   ),
                 ),
-                Container(
-                  child: Text(
-                    "Please select\na language",
-                    style: GoogleFonts.poppins(
-                        fontSize: 17,
-                        color: const Color(0xffBABABA),
-                        fontWeight: FontWeight.w300),
-                  ),
+                Text(
+                  "Please select\na language",
+                  style: GoogleFonts.poppins(
+                      fontSize: 17,
+                      color: const Color(0xffBABABA),
+                      fontWeight: FontWeight.w300),
                 ),
                 SizedBox(height: _height / 36),
                 RadioListTile(
